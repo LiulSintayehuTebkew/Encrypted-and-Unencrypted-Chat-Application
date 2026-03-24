@@ -4,7 +4,7 @@ This project demonstrates three types of chat applications with increasing level
 
 ## Different level of security(Increasing downward)
 
-### 1. Insecure Chat Application
+### 1. Insecure Chat Application(No Encryption at all)
 - Conversations are sent in plain text.
 - No security measures are implemented.
 - Vulnerable to attackers (e.g., "Oscar") sniffing packets using tools like Wireshark.  
