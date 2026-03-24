@@ -1,25 +1,26 @@
-# Encrypted-and-Unencrypted-Chat-Application
+# Encrypted and Unencrypted Chat Application
 
-**This project has 3 sections where the security measure taken increases from none to highly secured.**
+This project demonstrates three types of chat applications with increasing levels of security.
 
-## 1. Insecure Chat Application
-- Conversation between two parties is done in plain text
-- No security measure is taken
-- Oscar (attackers) can sniff the packet using Wireshark. This will be demonstrated inside the documentation file
+## Features
 
-## 2. Encrypted with Symmetric Encryption Algorithm (Shift Cipher)
-- The conversation between the two parties is somewhat secured
-- However, the strength of the encryption is very weak for two reasons:
+### 1. Insecure Chat Application
+- Conversations are sent in plain text.
+- No security measures are implemented.
+- Vulnerable to attackers (e.g., "Oscar") sniffing packets using tools like Wireshark.  
+  *Demo of packet sniffing is included in the documentation.*
 
-  **1. It is a shift cipher** — the key space is just 26
-  - This is easily broken with brute force attack. The brute force code will be added to the project
+### 2. Encrypted with Symmetric Encryption (Shift Cipher)
+- Messages are encrypted between the two parties.
+- **Weaknesses:**
+  1. **Shift Cipher:** Key space is only 26, making brute-force attacks trivial.  
+     *Brute-force attack code is included in the project.*
+  2. **Key Distribution Problem:** If the key is exchanged publicly, it can be intercepted and used to read messages.
 
-  **2. Symmetric keys have a key distribution problem**
-  - Even though it is not prone to brute force attack, if the key exchange is done publicly it will be sniffed and used to read the message
-
-## 3. Encrypted with Asymmetric Encryption (RSA)
-- This is the most secured and trusted way of communication
-- This is the technology used today to secure day-to-day internet browsing
-- Used in areas like HTTPS and other highly secured applications
-- RSA solves the problem of key distribution by providing the concept of two different keys for encryption and decryption, where data is encrypted using public keys and decrypted only by individuals with the correct private key
-- In the modern world, RSA is also used to encrypt the secret key generated for message encryption in the AES algorithm
+### 3. Encrypted with Asymmetric Encryption (RSA)
+- Provides the highest level of security and trust.
+- Widely used in modern internet applications like HTTPS.
+- **Key Advantages:**
+  - Solves key distribution issues using separate public and private keys.
+  - Public key encrypts the message; private key decrypts it.
+- Commonly used to encrypt secret keys for symmetric algorithms like AES.
