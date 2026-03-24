@@ -2,7 +2,7 @@
 
 This project demonstrates three types of chat applications with increasing levels of security.
 
-## Features
+## Different level of security(Increasing downward)
 
 ### 1. Insecure Chat Application
 - Conversations are sent in plain text.
