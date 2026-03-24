@@ -24,3 +24,5 @@ This project demonstrates three types of chat applications with increasing level
   - Solves key distribution issues using separate public and private keys.
   - Public key encrypts the message; private key decrypts it.
 - Commonly used to encrypt secret keys for symmetric algorithms like AES.
+### this document is only for educational purpose
+  - the content of this project is to demonstrate how we can secure data exchange and how we can select best algorithm to maintaing security.
