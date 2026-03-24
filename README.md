@@ -2,9 +2,9 @@
 
 This project demonstrates three types of chat applications with increasing levels of security.
 
-## Different level of security(Increasing downward)
+## Different Levels of Security (Increasing downward)
 
-### 1. Insecure Chat Application(No Encryption at all)
+### 1. Insecure Chat Application (No Encryption at all)
 - Conversations are sent in plain text.
 - No security measures are implemented.
 - Vulnerable to attackers (e.g., "Oscar") sniffing packets using tools like Wireshark.  
@@ -24,5 +24,18 @@ This project demonstrates three types of chat applications with increasing level
   - Solves key distribution issues using separate public and private keys.
   - Public key encrypts the message; private key decrypts it.
 - Commonly used to encrypt secret keys for symmetric algorithms like AES.
-### this document is only for educational purpose
-  - the content of this project is to demonstrate how we can secure data exchange and how we can select best algorithm to maintaing security.
+
+### 4. Cyber Attacks
+- **Unencrypted Chat Attack:** Used Wireshark to capture network traffic and read the conversation in plain text.
+- **Shift Cipher Attack:** 
+  - Captured the first message for key exchange, then used the key to decrypt ciphertext.
+  - Also demonstrated brute-force attack (easy since key space is only 26).  
+    *Python brute-force code is attached in the documentation.*
+- **RSA Attack:** 
+  - Used prime factorization to get `p` and `q`, which are crucial to generate the private key.
+  - Works only if prime numbers are small.  
+  - In real-world applications, very large primes are used to make brute-forcing computationally infeasible.
+
+### Note
+- This project is **only for educational purposes**.
+- Demonstrates how to secure data exchange and how to select the best algorithm to maintain security.
